@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 创建
+    const myMap = new Map();
+    const keyObj = {}
+    myMap.set(keyObj, "和键 keyObj 关联的值")
+    myMap.get(keyObj); // "和键 keyObj 关联的值"
+    myMap.get({}); // undefined
+
+    // 迭代
+    var myMap2 = new Map();
+    myMap2.set(0, "zero");
+    myMap2.set(1, "one");
+    
+    //  "0 = zero" , "1 = one"
+    for (let [key, value] of myMap2) {
+      console.log(key + " = " + value);
+    }
+
+    //  "0 = zero" , "1 = one"
+    myMap2.forEach(function(value, key) {
+      console.log(key + " = " + value);
+    }, myMap2)
+
+    const  kvArray = [["key1", "value1"], ["key2", "value2"]];
+    // Map 构造函数可以将一个 二维 键值对数组转换成一个 Map 对象
+    const myMap3 = new Map(kvArray);
+      
+    // 使用 Array.from 函数可以将一个 Map 对象转换成一个二维键值对数组
+    const outArray = Array.from(myMap3);
+
+    const first = new Map([[1, 'one'], [2, 'two'], [3, 'three'],]);
+    const second = new Map([[1, 'uno'], [2, 'dos']]);
+    
+    // 合并两个 Map 对象时，如果有重复的键值，则后面的会覆盖前面的，对应值即 uno，dos， three
+    const merged = new Map([...first, ...second]);
+  </script>
+</body>
+</html>

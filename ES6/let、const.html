@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 循环
+    for (var i = 0; i < 10; i++) {
+      setTimeout(function(){
+        console.log(i);// 输出十个 10
+      })
+    }
+    
+    for (let j = 0; j < 10; j++) {
+      setTimeout(function(){
+        console.log(j);// 输出 0123456789
+      })
+    }
+    
+    // 变量提升
+    console.log(a);  //ReferenceError: a is not defined
+    let a = "apple";
+    
+    console.log(b);  //undefined
+    var b = "banana";
+
+    // 暂时性死区
+    var PI = "a";
+    if(true){
+      console.log(PI);  // Cannot access 'PI' before initialization
+      const PI = "3.1415926";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let sy = Symbol("key1");
+ 
+ // 写法1
+ let syObject = {};
+ syObject[sy] = "kk";
+ console.log(syObject);    // {Symbol(key1): "kk"}
+  
+//  // 写法2
+//  let syObject = {
+//    [sy]: "kk"
+//  };
+//  console.log(syObject);    // {Symbol(key1): "kk"}
+  
+//  // 写法3
+//  let syObject = {};
+//  Object.defineProperty(syObject, sy, {value: "kk"});
+//  console.log(syObject);   // {Symbol(key1): "kk"}
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 子串的识别
+    let string = "apple,banana,orange";
+    string.includes("banana");     // true
+    string.startsWith("apple");    // true
+    string.endsWith("apple");      // false
+    string.startsWith("banana",6)  // true
+
+    // 子串的重复
+    console.log("Hello,".repeat(2));  // "Hello,Hello,"
+
+    // 模版字符串
+    innerHtml = `<ul>
+      <li>menu</li>
+      <li>mine</li>
+    </ul>
+    `;
+    console.log(innerHtml);
+    /* 输出
+      <ul>
+      <li>menu</li>
+      <li>mine</li>
+      </ul> 
+    */
+  </script>
+</body>
+</html>

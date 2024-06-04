@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1 {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+    .child1 {
+      width: 200px;
+      height: 200px;
+      background-color: antiquewhite;
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <div class="child1">网格布局</div>
+  </div>
+  <!--  垂直居中元素（多行文本）：可以使用表格布局来实现多行文本的垂直居中。将容器的样式设置为display: table;，然后将子元素作为表格单元格放入容器中，最后设置子元素的样式为vertical-align: middle;。 -->
+  <!-- 垂直居中元素（不确定高度的块级元素）：可以使用绝对定位和transform属性来实现。首先，将容器的样式设置为position: relative;，然后将子元素的样式设置为position: absolute; top: 50%; transform: translateY(-50%) -->
+</body>
+</html>

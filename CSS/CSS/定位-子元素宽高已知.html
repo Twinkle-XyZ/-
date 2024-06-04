@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .div1 {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    .child1 {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      background-color: antiquewhite;
+      margin: -100px -100px;
+      top: 50%;
+      left: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <div class="child1"></div>
+  </div>
+  <!-- 垂直居中元素（单行文本）：可以通过设置容器高度与行高相同，再结合line-height: normal;来实现单行文本的垂直居中。 -->
+  <!-- 垂直居中元素（任意大小的块级元素）：可以使用Flexbox布局来实现垂直居中。首先，将容器的样式设置为display: flex; align-items: center;，然后将子元素放入容器中即可。 -->
+  <!--  垂直居中元素（多行文本）：可以使用表格布局来实现多行文本的垂直居中。将容器的样式设置为display: table;，然后将子元素作为表格单元格放入容器中，最后设置子元素的样式为vertical-align: middle;。 -->
+  <!-- 垂直居中元素（不确定高度的块级元素）：可以使用绝对定位和transform属性来实现。首先，将容器的样式设置为position: relative;，然后将子元素的样式设置为position: absolute; top: 50%; transform: translateY(-50%) -->
+</body>
+</html>
